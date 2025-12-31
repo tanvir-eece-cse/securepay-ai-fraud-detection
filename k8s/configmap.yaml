@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: securepay-config
+  namespace: securepay-prod
+data:
+  ENVIRONMENT: "production"
+  LOG_LEVEL: "INFO"
+  CORS_ORIGINS: "https://securepay.com.bd"
+  RATE_LIMIT_PER_MINUTE: "100"
+  RATE_LIMIT_PER_HOUR: "1000"
+  MAX_TRANSACTION_AMOUNT: "500000"
+  FRAUD_SCORE_THRESHOLD_HIGH: "0.8"
+  FRAUD_SCORE_THRESHOLD_MEDIUM: "0.5"
+  FRAUD_SCORE_THRESHOLD_LOW: "0.3"
